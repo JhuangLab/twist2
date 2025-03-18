@@ -1,0 +1,342 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "twist2_zt",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book of code accompanying our manuscript “TWIST2 high expression defines a new subtype of B-cell precursor acute lymphoblastic leukemia”.\n\nsessionInfo()\n\nR version 4.4.1 (2024-06-14)\nPlatform: x86_64-conda-linux-gnu\nRunning under: CentOS Linux 8\n\nMatrix products: default\nBLAS/LAPACK: /cluster/apps/anaconda3/2020.02/envs/R-4.4.1/lib/libopenblasp-r0.3.27.so;  LAPACK version 3.12.0\n\nlocale:\n [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              \n [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    \n [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   \n [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 \n [9] LC_ADDRESS=C               LC_TELEPHONE=C            \n[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       \n\ntime zone: Asia/Shanghai\ntzcode source: system (glibc)\n\nattached base packages:\n[1] stats4    grid      stats     graphics  grDevices utils     datasets \n[8] methods   base     \n\nother attached packages:\n [1] ggraph_2.2.1                tidygraph_1.3.1            \n [3] ggrepel_0.9.6               viridis_0.6.5              \n [5] viridisLite_0.4.2           jhuanglabRNAseq_1.0.0      \n [7] SummarizedExperiment_1.36.0 Biobase_2.66.0             \n [9] GenomicRanges_1.58.0        GenomeInfoDb_1.42.1        \n[11] IRanges_2.40.1              S4Vectors_0.44.0           \n[13] BiocGenerics_0.52.0         MatrixGenerics_1.18.1      \n[15] matrixStats_1.5.0           ComplexHeatmap_2.22.0      \n[17] circlize_0.4.16             lubridate_1.9.4            \n[19] forcats_1.0.0               stringr_1.5.1              \n[21] dplyr_1.1.4                 purrr_1.0.4                \n[23] readr_2.1.5                 tidyr_1.3.1                \n[25] tibble_3.2.1                ggplot2_3.5.1              \n[27] tidyverse_2.0.0             patchwork_1.3.0            \n[29] ggsci_3.2.0                 glue_1.8.0                 \n[31] jhtools_1.0.0               ggthemes_5.1.0             \n\nloaded via a namespace (and not attached):\n  [1] fs_1.6.5                 easySVG_0.1.0            bitops_1.0-9            \n  [4] enrichplot_1.26.6        httr_1.4.7               RColorBrewer_1.1-3      \n  [7] doParallel_1.0.17        tools_4.4.1              backports_1.5.0         \n [10] R6_2.6.1                 lazyeval_0.2.2           GetoptLong_1.0.5        \n [13] withr_3.0.2              prettyunits_1.2.0        gridExtra_2.3           \n [16] cli_3.6.4                formatR_1.14             genefilter_1.88.0       \n [19] ngstk_0.2.3              ggridges_0.5.6           Rsamtools_2.22.0        \n [22] yulab.utils_0.1.9        gson_0.1.0               DOSE_4.0.0              \n [25] R.utils_2.12.3           ini_0.3.1                parallelly_1.42.0       \n [28] limma_3.62.2             RSQLite_2.3.9            BiocIO_1.16.0           \n [31] generics_0.1.3           gridGraphics_0.5-1       shape_1.4.6.1           \n [34] configr_0.3.5            hwriter_1.3.2.1          gtools_3.9.5            \n [37] car_3.1-3                zip_2.3.1                dendextend_1.19.0       \n [40] GO.db_3.20.0             Matrix_1.7-2             futile.logger_1.4.3     \n [43] abind_1.4-8              R.methodsS3_1.8.2        lifecycle_1.0.4         \n [46] yaml_2.3.10              carData_3.0-5            gplots_3.2.0            \n [49] qvalue_2.38.0            SparseArray_1.6.1        BiocFileCache_2.14.0    \n [52] blob_1.2.4               gdata_3.0.1              crayon_1.5.3            \n [55] RcppTOML_0.2.2           ggtangle_0.0.6           lattice_0.22-6          \n [58] msigdbr_7.5.1            cowplot_1.1.3            annotate_1.84.0         \n [61] KEGGREST_1.46.0          pillar_1.10.1            knitr_1.49              \n [64] optparse_1.7.5           fgsea_1.32.2             rjson_0.2.23            \n [67] codetools_0.2-20         fastmatch_1.1-6          ggfun_0.1.8             \n [70] data.table_1.17.0        vctrs_0.6.5              png_0.1-8               \n [73] treeio_1.30.0            gtable_0.3.6             cachem_1.1.0            \n [76] xfun_0.51                openxlsx_4.2.7.1         S4Arrays_1.6.0          \n [79] survival_3.8-3           iterators_1.0.14         statmod_1.5.0           \n [82] nlme_3.1-166             ggtree_3.14.0            bit64_4.6.0-1           \n [85] progress_1.2.3           filelock_1.0.3           KernSmooth_2.23-26      \n [88] colorspace_2.1-1         DBI_1.2.3                DESeq2_1.46.0           \n [91] tidyselect_1.2.1         bit_4.5.0.1              compiler_4.4.1          \n [94] curl_6.2.1               httr2_1.1.0              xml2_1.3.7              \n [97] DelayedArray_0.32.0      rtracklayer_1.66.0       scales_1.3.0            \n[100] caTools_1.18.3           rappdirs_0.3.3           digest_0.6.37           \n[103] rmarkdown_2.29           XVector_0.46.0           htmltools_0.5.8.1       \n[106] pkgconfig_2.0.3          gvmap_0.1.6              dbplyr_2.5.0            \n[109] fastmap_1.2.0            rlang_1.1.5              GlobalOptions_0.1.2     \n[112] htmlwidgets_1.6.4        UCSC.utils_1.2.0         farver_2.1.2            \n[115] jsonlite_1.9.1           DEXSeq_1.52.0            BiocParallel_1.40.0     \n[118] GOSemSim_2.32.0          R.oo_1.27.0              RCurl_1.98-1.16         \n[121] magrittr_2.0.3           Formula_1.2-5            GenomeInfoDbData_1.2.13 \n[124] ggplotify_0.1.2          munsell_0.5.1            Rcpp_1.0.14             \n[127] ape_5.8-1                babelgene_22.9           stringi_1.8.4           \n[130] MASS_7.3-64              zlibbioc_1.52.0          plyr_1.8.9              \n[133] org.Hs.eg.db_3.20.0      parallel_4.4.1           listenv_0.9.1           \n[136] graphlayouts_1.2.1       Biostrings_2.74.1        splines_4.4.1           \n[139] hms_1.1.3                locfit_1.5-9.10          igraph_2.1.4            \n[142] ggpubr_0.6.0             ggsignif_0.6.4           reshape2_1.4.4          \n[145] geneplotter_1.84.0       biomaRt_2.62.0           futile.options_1.0.1    \n[148] XML_3.99-0.18            evaluate_1.0.3           lambda.r_1.2.4          \n[151] tweenr_2.0.3             tzdb_0.4.0               foreach_1.5.2           \n[154] polyclip_1.10-7          getopt_1.20.4            future_1.34.0           \n[157] clue_0.3-66              ggforce_0.4.2            broom_1.0.7             \n[160] xtable_1.8-4             restfulr_0.0.15          rsvg_2.6.0              \n[163] tidytree_0.4.6           rstatix_0.7.2            clusterProfiler_4.14.4  \n[166] aplot_0.2.4              GenomicAlignments_1.42.0 memoise_2.0.1           \n[169] AnnotationDbi_1.68.0     tximport_1.34.0          cluster_2.1.8           \n[172] corrplot_0.95            timechange_0.3.0         globals_0.16.3          \n[175] ggfortify_0.4.17",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "fig1.html",
+    "href": "fig1.html",
+    "title": "fig1",
+    "section": "",
+    "text": "fig1A-1\nmx &lt;-  glue(\"{in_dir}/raw_big_heatmap.rds\") %&gt;% read_rds\ncluster_annotation &lt;-  glue(\"{in_dir}/raw_big_heatmap_anno.rds\") %&gt;% read_rds\ngroup_color &lt;-  glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\nbigcod &lt;-  glue(\"{in_dir}/bigcod.rds\") %&gt;% read_rds\nft &lt;- cluster_annotation$label != \"others\"\nha &lt;- HeatmapAnnotation(\n  label = cluster_annotation$biglabel[ft],\n  col = list(\n    label = group_color\n  ),\n  simple_anno_size = unit(1.8, \"mm\"),\n  show_legend = F,\n  show_annotation_name = F\n)\nht &lt;- Heatmap(t(mx)[,ft],\n              column_split = factor(cluster_annotation$biglabel[ft], levels = bigcod),\n              clustering_method_columns = \"ward.D2\",\n              clustering_distance_columns = \"spearman\",\n              cluster_rows = F, cluster_columns = T,\n              show_row_names = F, show_column_names = F, top_annotation = ha,\n              column_title_rot = 45,\n              use_raster = F,\n              heatmap_width = unit(200, \"mm\"),\n              column_dend_height = unit(5, \"mm\"),\n              column_title_gp = gpar(fontsize = 9),\n              column_title = NULL,\n              border = T,\n              border_gp = gpar(lwd = 0.5),\n              column_gap = unit(0, \"mm\"), show_heatmap_legend = F)\npdf(glue(\"{out_dir}/fig1A1.pdf\"), width = 8.6, height = 2.5)\ndraw(ht)\nd &lt;- dev.off()\nht",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>fig1</span>"
+    ]
+  },
+  {
+    "objectID": "fig1.html#fig1a-2",
+    "href": "fig1.html#fig1a-2",
+    "title": "fig1",
+    "section": "fig1A-2",
+    "text": "fig1A-2\n\nmx2 &lt;- read_rds(glue(\"{in_dir}/raw_sub_heatmap.rds\"))\ncluster_annotation2 &lt;- read_rds(glue(\"{in_dir}/raw_subheatmap_anno.rds\"))\ncolDendrogram &lt;- read_rds(glue(\"{in_dir}/colDendrogram.rds\"))\nspv&lt;- read_rds(glue(\"{in_dir}/raw_sub_ids.rds\"))\n\nha2 &lt;- HeatmapAnnotation(\n  label = cluster_annotation2$label,\n  IDH = cluster_annotation2$IDH,\n  FH_A273T = cluster_annotation2$FH_A273T,\n  col = list(\n    label = group_color,\n    IDH = c(\"IDH1_132\" = \"black\", \"IDH2_140\" = \"black\"),\n    FH_A273T = c(\"FH_A273T\" = \"black\")\n  ),\n  simple_anno_size = unit(1.8, \"mm\"),\n  annotation_name_gp =  grid::gpar(fontsize = 7),\n  show_legend = F,\n  show_annotation_name = T\n)\nht &lt;- Heatmap(t(mx2)[,spv],\n              cluster_columns = colDendrogram,\n              clustering_method_columns = \"ward.D2\",\n              clustering_distance_columns = \"pearson\",\n              cluster_rows = F,\n              show_row_names = F, show_column_names = F, top_annotation = ha2,\n              column_title_rot = 45,\n              column_dend_height = unit(3, \"mm\"),\n              heatmap_width = unit(50, \"mm\"),\n              use_raster = F,\n              column_title_gp = gpar(fontsize = 8.5),\n              border = T,\n              border_gp = gpar(lwd = 0.5),\n              column_gap = unit(0, \"mm\"), show_heatmap_legend = F)\npdf(glue(\"{out_dir}/fig1A2.pdf\"), width = 4, height = 3.5)\ndraw(ht)\nd &lt;- dev.off()\nht",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>fig1</span>"
+    ]
+  },
+  {
+    "objectID": "fig1.html#fig1b-1",
+    "href": "fig1.html#fig1b-1",
+    "title": "fig1",
+    "section": "fig1B-1",
+    "text": "fig1B-1\n\numap_frame &lt;- glue(\"{in_dir}/umap_frame.rds\") %&gt;% read_rds()\numap_label_frame &lt;- glue(\"{in_dir}/umap_label_frame.rds\") %&gt;% read_rds()\ngroup_color &lt;-  glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds()\nsubcod &lt;-  glue(\"{in_dir}/subcod.rds\") %&gt;% read_rds()\na &lt;- umap_frame %&gt;%\n        dplyr::filter(sub_groups != \"others\") %&gt;%\n        ggplot(aes(x = V1, y = V2, color = sub_groups)) +\n        geom_point(size = 0.5) +\n        theme_void() +\n        scale_color_manual(values = group_color) +\n        theme(legend.position = \"none\") +\n        geom_text_repel(data = umap_label_frame %&gt;%\n                          dplyr::filter(!sub_groups %in% subcod) %&gt;%\n                          dplyr::filter(sub_groups != \"others\"),\n                        mapping = aes(x = x, y = y, label = sub_groups),\n                        color = \"black\",size = 3,\n                        max.overlaps = 1000)+\n        geom_rect(xmin = 3.4, xmax = 5.3, ymin = -1.3, ymax = 0.026,\n                  fill = NA, linewidth = 0.5, color = \"red\", linetype = \"dashed\")\npdf(glue(\"{out_dir}/fig1B1.pdf\"), width = 4, height = 3.5)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>fig1</span>"
+    ]
+  },
+  {
+    "objectID": "fig1.html#fig1b-2",
+    "href": "fig1.html#fig1b-2",
+    "title": "fig1",
+    "section": "fig1B-2",
+    "text": "fig1B-2\n\numap_frame &lt;- glue(\"{in_dir}/umap_frame.rds\") %&gt;% read_rds()\nsubcod &lt;-  glue(\"{in_dir}/subcod.rds\") %&gt;% read_rds()\numap_label_frame_sub &lt;- glue(\"{in_dir}/umap_label_frame_sub.rds\") %&gt;% read_rds()\ngroup_color &lt;-  glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\na &lt;- umap_frame %&gt;%\n        dplyr::filter(sub_groups %in% subcod) %&gt;%\n        dplyr::filter(V1 &gt; 2.3) %&gt;%\n        ggplot(aes(x = V1, y = V2, color = sub_groups)) +\n        geom_point(size = 0.3) +\n        theme_void() +\n        scale_color_manual(values = group_color) +\n        theme(legend.position = \"none\") +\n        geom_text_repel(data = umap_label_frame_sub,\n                        mapping = aes(x = x, y = y, label = sub_groups),\n                        color = \"black\",size = 1.5,\n                        max.overlaps = 100000)\npdf(glue(\"{out_dir}/fig1B2.pdf\"), width = 3.5*0.4, height = 3*0.4)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>fig1</span>"
+    ]
+  },
+  {
+    "objectID": "fig1.html#fig1c",
+    "href": "fig1.html#fig1c",
+    "title": "fig1",
+    "section": "fig1C",
+    "text": "fig1C\n\nboxplotdf &lt;- glue(\"{in_dir}/boxplot_twist2.rds\") %&gt;% read_rds\ngroup_color &lt;-  glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\nboxplotp &lt;- boxplotdf %&gt;%\n  ggplot(aes(x = sub_groups, y = TWIST2, fill = sub_groups)) +\n  geom_boxplot(outlier.size = 0.5) +\n  scale_fill_manual(values = group_color) +\n  theme_few() +\n  ylab(label = \"Expression level of TWIST2\") +\n  theme(\n    axis.text.y = element_text(size = 5,colour = \"black\"),\n    axis.text.x = element_text(size = 8, angle = 90, hjust = 1, vjust = 0.5,colour = \"black\"),\n    axis.ticks = element_line(linewidth = 0.8,colour = \"black\"),\n    axis.ticks.length = unit(0.05, \"lines\"),\n    axis.title.x = element_blank(),\n    axis.title.y = element_text(size = 8),\n    legend.position = \"none\",\n\n    panel.border = element_rect(colour = \"black\", linewidth = 1)\n  )\npdf(glue(\"{out_dir}/fig1C.pdf\"), width = 5, height = 2.5)\nprint(boxplotp)\nd &lt;- dev.off()\nboxplotp",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>fig1</span>"
+    ]
+  },
+  {
+    "objectID": "fig1.html#fig1d",
+    "href": "fig1.html#fig1d",
+    "title": "fig1",
+    "section": "fig1D",
+    "text": "fig1D\n\nfull_rankframe &lt;- glue(\"{in_dir}/generank_twist2.rds\") %&gt;% read_rds\ngroup_color &lt;-  glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\n\nsub_rankframe &lt;- full_rankframe %&gt;% dplyr::filter(rank &lt;= 5)\nrank_plot &lt;- ggplot(full_rankframe, aes(x = rank, y = logFC)) +\n  geom_point(size = 0.2)+\n  theme_few() +\n  ylab(label = \"logFC\") +\n  theme(\n    axis.text.y = element_text(size = 8,colour = \"black\"),\n    axis.text.x = element_blank(),\n    axis.ticks.y = element_line(linewidth = 0.8,colour = \"black\"),\n    axis.ticks.x = element_blank(),\n    axis.ticks.length = unit(0.05, \"lines\"),\n    axis.title.x = element_blank(),\n    axis.title.y = element_text(size = 8),\n    legend.position = \"none\",\n\n    panel.border = element_rect(colour = \"black\", linewidth = 1)\n  ) +\n  geom_text_repel(data = sub_rankframe,\n                  mapping = aes(label = gene),\n                  color = \"black\",size = 2,\n                  max.overlaps = 10)\npdf(glue(\"{out_dir}/fig1D.pdf\"), width = 1.7, height = 2.5)\nprint(rank_plot)\nd &lt;- dev.off()\nrank_plot",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>fig1</span>"
+    ]
+  },
+  {
+    "objectID": "fig2.html",
+    "href": "fig2.html",
+    "title": "fig2",
+    "section": "",
+    "text": "fig2A\ngroup_twist2&lt;- glue(\"{in_dir}/twist2_deg.rds\") %&gt;% read_rds\ndarw_volcano &lt;- function(df){\n  tmp &lt;- df %&gt;% as_tibble(rownames = \"genes\") %&gt;%\n    dplyr::mutate(label = case_when(\n      logFC &gt; 1 & adj.P.Val &lt; 0.05 ~ \"UP\",\n      logFC &lt; -1 & adj.P.Val &lt; 0.05 ~ \"DOWN\",\n      T ~ \"NOSIG\"\n    ),\n    `- log10(adj.P.Val)` = - log10(adj.P.Val)) %&gt;%\n    arrange(desc(abs(logFC)))\n  tmp$`- log10(adj.P.Val)`[tmp$`- log10(adj.P.Val)` &gt; 75] &lt;- 75\n  labeled_frame &lt;- tmp %&gt;%\n    dplyr::filter(abs(logFC) &gt; 5.5 | - log10(adj.P.Val) &gt; 45)\n  tmp %&gt;%\n    ggplot(aes(x = logFC, y = `- log10(adj.P.Val)`, color = label)) +\n    geom_point(size = 0.01) +\n    scale_color_manual(values = c(\"UP\" = \"#DC143C\", \"DOWN\" = \"#1E90FF\"), guide = guide_legend(\n      keywidth = 0.1)) +\n    theme_few()  +\n    geom_vline(xintercept = c(1,-1), linetype = \"dashed\", size = 0.2) +\n    geom_hline(yintercept = c(1.30103), linetype = \"dashed\", size = 0.2) +\n    scale_y_continuous(expand = expansion(mult = c(.06, 0.15))) +\n    scale_x_continuous(expand = expansion(mult = c(.06, 0.15))) +\n    ggrepel::geom_label_repel(data = labeled_frame, mapping = aes(label = genes),\n                              color = \"black\", fill = NA,\n                              size = 2,\n                              label.padding = 0.1,\n                              max.overlaps = 1000,\n                              label.r = 0.11,\n                              label.size = 0.1,\n                              min.segment.length = 0.1,\n                              max.iter = 65,\n                              force = 1,\n                              force_pull = 0.1,\n                              segment.size = 0.1) +\n    theme(\n      axis.ticks = element_line(linewidth = 0.2),\n      axis.ticks.length = unit(0.1, \"lines\"),\n      axis.text = element_text(size = 7, colour = \"black\"),\n      axis.title = element_text(size = 7, colour = \"black\"),\n      legend.box.margin = margin(0,0,0,0),\n      legend.box.spacing = unit(1, \"mm\"),\n      legend.key.width = unit(1.5, \"mm\"),\n      legend.key.height = unit(1.5, \"mm\"),\n      legend.text = element_text(size = 7),\n      legend.title = element_text(size = 7),\n      legend.spacing = unit(0, 'cm'),\n      legend.margin = margin(0,0,0,0),\n      panel.border = element_rect(colour = \"black\")\n    )\n}\npdf(glue(\"{out_dir}/fig2A.pdf\"), width = 3, height = 3.5)\nprint(darw_volcano(group_twist2))\nd &lt;- dev.off()\ndarw_volcano(group_twist2)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>fig2</span>"
+    ]
+  },
+  {
+    "objectID": "fig2.html#fig2b",
+    "href": "fig2.html#fig2b",
+    "title": "fig2",
+    "section": "fig2B",
+    "text": "fig2B\n\nsshal &lt;- glue(\"{in_dir}/h.all.v2023.1.Hs.symbols.rds\") %&gt;% read_rds\na &lt;- ggplot(sshal,aes(x = sub_types, y = gene_set %&gt;% str_replace_all(\"_\", \" \") %&gt;% str_wrap(width = 30),\n                   fill = value)) +\n    geom_tile() +\n    scale_fill_gradient2(low = \"blue\", high = \"red\",\n                         guide = guide_colourbar(label.hjust = 0.5)) +\n    theme_few() +\n    theme(\n      axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5,colour = \"black\"),\n      axis.text = element_text(size = 5,colour = \"black\"),\n      axis.ticks = element_line(linewidth = 0.2,colour = \"black\"),\n      axis.ticks.length = unit(0.05, \"lines\"),\n      axis.title = element_blank(),\n      legend.box.margin = margin(0,0,0,0),\n      legend.box.spacing = unit(1.5, \"mm\"),\n      legend.key.width = unit(2, \"mm\"),\n      legend.key.height = unit(2, \"mm\"),\n      legend.text = element_text(size = 5),\n      legend.title = element_text(size = 5),\n      legend.ticks.length = unit(0.1, \"lines\"),\n      panel.border = element_rect(colour = \"black\", linewidth = 0.3)\n    )\npdf(glue(\"{out_dir}/fig2B.pdf\"), width = 4, height = 2)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>fig2</span>"
+    ]
+  },
+  {
+    "objectID": "fig2.html#fig2c",
+    "href": "fig2.html#fig2c",
+    "title": "fig2",
+    "section": "fig2C",
+    "text": "fig2C\n\nsubg &lt;- read_rds(glue(\"{in_dir}/tf_net.rds\"))\nlayoutx &lt;- read_rds(glue(\"{in_dir}/tf_net_layout.rds\"))\np0 &lt;- ggraph(subg, layout = layoutx) +\n  geom_edge_link(end_cap = rectangle(3, 3, 'mm', 'mm'),\n                 color = \"grey\", edge_width = 0.4) +\n  geom_node_label(aes(label = name, color = type),\n                  repel = F, size = 2.8, fill = NA,\n                  label.size = 0.5) +\n  scale_color_manual(values = c(\"A\" = \"#FA8072\", \"B\" = \"red\", \"C\" = \"#4D84C5\")) +\n  theme_void() +\n  theme(legend.position = 'none')+\n  scale_x_continuous(limits = c(-2.8,2.4))\nnetoutdir &lt;- checkdir(\"./paper_twist2_cdx2_g18/fig2/tf_enrich/net_fig\")\npdf(glue(\"{out_dir}/fig2C.pdf\"), width = 4.7, height = 5.5)\nprint(p0)\nd &lt;- dev.off()\np0",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>fig2</span>"
+    ]
+  },
+  {
+    "objectID": "fig3.html",
+    "href": "fig3.html",
+    "title": "fig3",
+    "section": "",
+    "text": "fig3C\nsample_frame &lt;- read_rds(glue(\"{in_dir}/pie_group.rds\"))\ntotalcod &lt;- glue(\"{in_dir}/twist2_idh_colod.rds\") %&gt;% read_rds\nsample_frame &lt;- sample_frame %&gt;%\n  mutate(twist2_label = case_when(\n    color_label == \"TWIST2-high\" ~ \"TWIST2-high\",\n    T ~ \"other group\"\n  ),\n  mutation2 = case_when(\n    str_detect(mutation, pattern = \"IDH\") ~ \"IDH1/2 mutation\",\n    str_detect(mutation, pattern = \"FH\") ~ \"FH A273T\",\n    T ~ \"others\"),\n  twist2_label = factor(twist2_label, levels = c(\"TWIST2-high\",\"other group\")),\n  color_label = factor(color_label, levels = totalcod)) %&gt;%\n  group_by(mutation2, twist2_label) %&gt;%\n  summarise(n = n()) %&gt;%\n  group_by(twist2_label) %&gt;%\n  mutate(prop = n/sum(n)) \na &lt;- ggplot(sample_frame, aes(x = \"\", y = prop, fill = mutation2)) +\n  geom_bar(width = 1, stat = \"identity\", color = \"white\") +\n  geom_text(mapping  = aes(x = \"\", y = prop, label = mutation2), position = position_stack(vjust= 0.5 ), size = 3)+\n  coord_polar(\"y\", start = 0)+\n  scale_fill_manual(values = c(\"IDH1/2 mutation\" = \"red\", \"FH A273T\" = \"#4D84C5\", \"others\" = \"grey\")) +\n  theme_void()+\n  facet_wrap(~twist2_label)\npdf(glue(\"{out_dir}/fig3B.pdf\"),width = 4, height = 4)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>fig3</span>"
+    ]
+  },
+  {
+    "objectID": "fig3.html#fig3d",
+    "href": "fig3.html#fig3d",
+    "title": "fig3",
+    "section": "fig3D",
+    "text": "fig3D\n\nsurvdata &lt;- read_rds(glue(\"{in_dir}/surv.rds\"))\npdf(glue(\"{out_dir}/fig3D.pdf\"), width = 5, height = 5)\nfit &lt;- survival::survfit(Surv(os_time, vital_status) ~ t, data = survdata)\na &lt;- survminer::ggsurvplot(\n  fit,\n  data = survdata,\n  size = 1,\n  palette = c(\"red\", \"#2E9FDF\"),\n  conf.int = F,\n  legend.title = \"label\",\n  pval = TRUE,\n  risk.table = TRUE,\n  risk.table.col = \"strata\",\n  risk.table.y.text = T,\n  xlim = c(0, 60),\n  log.rank.weights = \"n\",\n  break.time.by = 12,\n  risk.table.height = 0.25,\n  ggtheme = theme_classic()\n)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>fig3</span>"
+    ]
+  },
+  {
+    "objectID": "fig5.html",
+    "href": "fig5.html",
+    "title": "fig5",
+    "section": "",
+    "text": "fig5A\nssgsea_metabolism &lt;- read_rds(glue(\"{in_dir}/ssgsea_metabolism.rds\"))\na &lt;- ggplot(ssgsea_metabolism,aes(x = sub_types, y = gene_set %&gt;% str_replace_all(\"_\", \" \") %&gt;% str_wrap(width = 30),\n                   fill = value)) +\n    geom_tile() +\n    scale_fill_gradient2(low = \"blue\", high = \"red\",\n                         guide = guide_colourbar(label.hjust = 0.5)) +\n    theme_few() +\n    theme(\n      axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5, colour = \"black\"),\n      axis.text = element_text(size = 6, colour = \"black\"),\n      axis.ticks = element_line(linewidth = 0.2, colour = \"black\"),\n      axis.ticks.length = unit(0.05, \"lines\"),\n      axis.title = element_blank(),\n      legend.box.margin = margin(0,0,0,0),\n      legend.box.spacing = unit(1.5, \"mm\"),\n      legend.key.width = unit(2, \"mm\"),\n      legend.key.height = unit(2, \"mm\"),\n      legend.text = element_text(size = 7),\n      legend.title = element_text(size = 7),\n      legend.ticks.length = unit(0.1, \"lines\"),\n      panel.border = element_rect(colour = \"black\", linewidth = 0.3)\n)\npdf(glue(\"{out_dir}/fig5A.pdf\"), width = 4.5, height = 2.5)\nprint(a)\nd &lt;- dev.off()\na\n##fig5B-1\nbigcod &lt;- glue(\"{in_dir}/bigcod.rds\") %&gt;% read_rds\ngroup_color &lt;- glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\nscaled_wd_heatmap &lt;- glue(\"{in_dir}/immue_big_matrix.rds\") %&gt;% read_rds\nimmue_big_anno &lt;- glue(\"{in_dir}/immue_big_anno.rds\") %&gt;% read_rds\nha &lt;- HeatmapAnnotation(\n  sub_groups = immue_big_anno,\n  col = list(\n    sub_groups = group_color\n  ),\n  simple_anno_size = unit(1.8, \"mm\"),\n  border = F,\n  show_legend = F,\n  show_annotation_name = F\n)\na &lt;- Heatmap(scaled_wd_heatmap,\n              column_split = factor(immue_big_anno, levels = bigcod),\n              clustering_method_columns = \"ward.D2\",\n              clustering_distance_columns = \"spearman\",\n              cluster_rows = F, cluster_columns = F,\n              show_row_names = T, show_column_names = F,\n              row_names_gp = gpar(fontsize = 6),\n              top_annotation = ha,\n              column_title_rot = 45,\n              use_raster = F,\n              column_title_gp = gpar(fontsize = 9),\n              border = T,\n              border_gp = gpar(lwd = 0.5),\n              column_gap = unit(0, \"mm\"), show_heatmap_legend = F)\n\nThe automatically generated colors map from the minus and plus 99^th of\nthe absolute values in the matrix. There are outliers in the matrix\nwhose patterns might be hidden by this color mapping. You can manually\nset the color to `col` argument.\n\nUse `suppressMessages()` to turn off this message.\n\npdf(glue(\"{out_dir}/fig5B1.pdf\"), width = 5.36, height = 4.5)\nprint(a)\nd &lt;- dev.off()\na\n##fig5B-2\ngroup_color &lt;- glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\nsub_scaled_wd_heatmap &lt;- glue(\"{in_dir}/immue_sub_matrix.rds\") %&gt;% read_rds\nsubv &lt;- glue(\"{in_dir}/immue_sub_anno.rds\") %&gt;% read_rds\nsubcod &lt;- glue(\"{in_dir}/subcod.rds\") %&gt;% read_rds\n\nsub_ha &lt;- HeatmapAnnotation(\n  sub_groups = subv,\n  col = list(\n    sub_groups = group_color\n  ),\n  simple_anno_size = unit(1.8, \"mm\"),\n  border = F,\n  show_legend = F,\n  show_annotation_name = F\n)\na &lt;- Heatmap(sub_scaled_wd_heatmap,\n              column_split = factor(subv, levels = subcod),\n              clustering_method_columns = \"ward.D2\",\n              clustering_distance_columns = \"spearman\",\n              cluster_rows = F, cluster_columns = F,\n              show_row_names = T, show_column_names = F,\n              row_names_gp = gpar(fontsize = 6),\n              top_annotation = sub_ha,\n              column_title_rot = 45,\n              use_raster = F,\n              column_title_gp = gpar(fontsize = 8),\n              border = T,\n              border_gp = gpar(lwd = 0.5),\n              column_gap = unit(0, \"mm\"), show_heatmap_legend = F) \n\nThe automatically generated colors map from the minus and plus 99^th of\nthe absolute values in the matrix. There are outliers in the matrix\nwhose patterns might be hidden by this color mapping. You can manually\nset the color to `col` argument.\n\nUse `suppressMessages()` to turn off this message.\n\npdf(glue(\"{out_dir}/fig5B2.pdf\"), width = 2.34, height = 4.5)\nprint(a)\ndev.off()\n\npng \n  2 \n\na",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>fig5</span>"
+    ]
+  },
+  {
+    "objectID": "sfig1.html",
+    "href": "sfig1.html",
+    "title": "sfig1",
+    "section": "",
+    "text": "sfig1A-1\ngroup_color &lt;-  glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\nbigcod &lt;-  glue(\"{in_dir}/bigcod.rds\") %&gt;% read_rds\nscaled_wd_heatmap &lt;- glue(\"{in_dir}/big_fusion_matrix.rds\") %&gt;% read_rds\nbig_fusion_anno &lt;- glue(\"{in_dir}/big_fusion_anno.rds\") %&gt;% read_rds\nrowv &lt;- glue(\"{in_dir}/big_fusion_rowsp.rds\") %&gt;% read_rds\nha &lt;- HeatmapAnnotation(\n  sub_groups = big_fusion_anno,\n  col = list(\n    sub_groups = group_color\n  ),\n  border = F,\n  simple_anno_size = unit(1.8, \"mm\"),\n  show_legend = F,\n  show_annotation_name = F\n)\na &lt;- Heatmap(scaled_wd_heatmap,\n              col = c(\"TRUE\" = \"#f80fe8\", \"Loss\" = \"blue\", \"1\" = \"orange\", \"Gain\" = \"red\"),\n              na_col = \"grey90\",\n              column_split = factor(big_fusion_anno, levels = bigcod),\n              row_split = rowv,\n              clustering_method_columns = \"ward.D2\",\n              clustering_distance_columns = \"spearman\",\n              cluster_rows = F, cluster_columns = F,\n              show_row_names = T, show_column_names = F,\n              row_names_gp = gpar(fontsize = 6),\n              row_title = NULL,\n              top_annotation = ha,\n              column_title_rot = 45,\n              use_raster = F,\n              column_title_gp = gpar(fontsize = 9),\n              border = T,\n              border_gp = gpar(lwd = 0.5),\n              column_gap = unit(0, \"mm\"), show_heatmap_legend = F)\npdf(glue(\"{out_dir}/figS1A1.pdf\"), width = 6.7, height = 4.5)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>sfig1</span>"
+    ]
+  },
+  {
+    "objectID": "sfig1.html#sfig1a-2",
+    "href": "sfig1.html#sfig1a-2",
+    "title": "sfig1",
+    "section": "sfig1A-2",
+    "text": "sfig1A-2\n\nsub_scaled_wd_heatmap &lt;- glue(\"{in_dir}/small_fusion_matrix.rds\") %&gt;% read_rds()\nheatmap_ordereds &lt;- glue(\"{in_dir}/small_fusion_anno.rds\") %&gt;% read_rds()\nrowv_ft &lt;- glue(\"{in_dir}/small_fusion_rowsp.rds\") %&gt;% read_rds()\ngroup_color &lt;-  glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\nsubcod &lt;-  glue(\"{in_dir}/subcod.rds\") %&gt;% read_rds()\nha &lt;- HeatmapAnnotation(\n  sub_groups = heatmap_ordereds$sub_types,\n  col = list(\n    sub_groups = group_color\n  ),\n  simple_anno_size = unit(1.8, \"mm\"),\n  border = F,\n  show_legend = F,\n  show_annotation_name = F\n)\na &lt;- Heatmap(sub_scaled_wd_heatmap,\n              col = c(\"TRUE\" = \"#f80fe8\", \"Loss\" = \"blue\", \"1\" = \"orange\", \"Gain\" = \"red\"),\n              na_col = \"grey90\",\n              column_split = factor(heatmap_ordereds$sub_types, levels = subcod),\n              row_split = rowv_ft,\n              clustering_method_columns = \"ward.D2\",\n              clustering_distance_columns = \"spearman\",\n              cluster_rows = F, cluster_columns = F,\n              show_row_names = T, show_column_names = F,\n              row_names_gp = gpar(fontsize = 6),\n              row_title = NULL,\n              top_annotation = ha,\n              column_title_rot = 45,\n              use_raster = F,\n              column_title_gp = gpar(fontsize = 9),\n              border = T,\n              border_gp = gpar(lwd = 0.5),\n              column_gap = unit(0, \"mm\"), show_heatmap_legend = F)\npdf(glue(\"{out_dir}/figS1A2.pdf\"), width = 4, height = 4.5)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>sfig1</span>"
+    ]
+  },
+  {
+    "objectID": "sfig1.html#sfig1b-1",
+    "href": "sfig1.html#sfig1b-1",
+    "title": "sfig1",
+    "section": "sfig1B-1",
+    "text": "sfig1B-1\n\nvaliddf &lt;- read_rds(glue(\"{in_dir}/valid_newsamples.rds\"))\numap_frame &lt;- glue(\"{in_dir}/umap_frame.rds\") %&gt;% read_rds()\numap_label_frame &lt;- glue(\"{in_dir}/umap_label_frame.rds\") %&gt;% read_rds()\ngroup_color &lt;-  glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds()\nsubcod &lt;-  glue(\"{in_dir}/subcod.rds\") %&gt;% read_rds()\na &lt;- ggplot() +\n      geom_point(data = umap_frame %&gt;%\n                     dplyr::filter(sub_groups != \"others\"),\n                     mapping = aes(x = V1, y = V2, color = sub_groups), size = 1, alpha = 0.5, shape = 16) +\n      geom_point(data = validdf, mapping = aes(x = V1, y = V2, color = sub_groups), size = 1, alpha = 1, shape = 3) +\n      theme_void() +\n      scale_color_manual(values = c(\"valid\" = \"#8B0000\", group_color)) +\n      theme(legend.position = \"none\") +\n      geom_text_repel(data = umap_label_frame %&gt;%\n                        dplyr::filter(!sub_groups %in% subcod) %&gt;%\n                        dplyr::filter(sub_groups != \"others\"),\n                      mapping = aes(x = x, y = y, label = sub_groups),\n                      color = \"black\",size = 3,\n                      max.overlaps = 1000)+\n      geom_rect(xmin = 3.4, xmax = 5.3, ymin = -1.3, ymax = 0.026,\n                fill = NA, linewidth = 0.5, color = \"red\", linetype = \"dashed\")\npdf(glue(\"{out_dir}/figS1B1.pdf\"), width = 4, height = 3.5)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>sfig1</span>"
+    ]
+  },
+  {
+    "objectID": "sfig1.html#sfig1b-2",
+    "href": "sfig1.html#sfig1b-2",
+    "title": "sfig1",
+    "section": "sfig1B-2",
+    "text": "sfig1B-2\n\nsub_validdf &lt;-  glue(\"{in_dir}/valid_newsamples_zoom.rds\") %&gt;% read_rds\nsubcod &lt;-  glue(\"{in_dir}/subcod.rds\") %&gt;% read_rds()\numap_label_framex &lt;-  glue(\"{in_dir}/umap_label_frame_sub.rds\") %&gt;% read_rds()\na &lt;- ggplot() +\n        geom_point(data = umap_frame %&gt;%\n                     dplyr::filter(sub_groups %in% subcod) %&gt;%\n                     dplyr::filter(V1 &gt; 2.3),\n                   mapping = aes(x = V1, y = V2, color = sub_groups), size = 0.8, alpha = 0.5, shape = 16) +\n        geom_point(data = sub_validdf, mapping = aes(x = V1, y = V2, color = sub_groups), size = 0.8, alpha = 1, shape = 3) +\n        theme_void() +\n        scale_color_manual(values = c(\"valid\" = \"#8B0000\", group_color)) +\n        theme(legend.position = \"none\") +\n        geom_text_repel(data = umap_label_framex,\n                        mapping = aes(x = x, y = y, label = sub_groups),\n                        color = \"black\",size = 2,\n                        max.overlaps = 100000)\npdf(glue(\"{out_dir}/figS1B2.pdf\"), width = 1.4, height = 1.2)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>sfig1</span>"
+    ]
+  },
+  {
+    "objectID": "sfig2.html",
+    "href": "sfig2.html",
+    "title": "sfig2",
+    "section": "",
+    "text": "sfig2A\npointf&lt;- glue(\"{in_dir}/similiary_point.rds\") %&gt;% read_rds\nelbow &lt;- pointf %&gt;%\n  ggplot(aes(x = index, y = dist, color = color_label)) +\n  geom_point(size = 0.3)+\n  geom_vline(xintercept = 18.5, linetype = \"dashed\", color = \"orange\") +\n  scale_color_manual(values = c(\"TWIST2-high\" = \"red\", \"others\" = \"grey\"),\n                     guide = guide_legend(\n                       title = \"label\",\n                       direction = \"horizontal\",\n                       title.position = \"top\",\n                       label.position = \"top\",\n                       axis.linewidth = NA,\n                       keywidth = unit(8, \"mm\"))) +\n  theme_few() +\n  theme(axis.text.x = element_blank(),\n        axis.text = element_text(size = 7, color = \"black\"),\n        axis.title.y = element_text(size = 7, color = \"black\"),\n        axis.title.x = element_blank(),\n        axis.ticks.y = element_line(linewidth = 0.35, colour = \"black\"),\n        axis.ticks.x = element_blank(),\n        legend.box.margin = margin(0,0,0,0),\n        legend.box.spacing = unit(1, \"mm\"),\n        legend.key.width = unit(0.7, \"mm\"),\n        legend.key.height = unit(3.5, \"mm\"),\n        legend.text = element_text(size = 7),\n        legend.spacing = unit(0, 'cm'),\n        legend.margin = margin(0,0,0,0),\n        legend.title = element_text(hjust = 0.5, vjust = 1, size = 7),\n        legend.position = \"top\",\n        panel.border = element_rect(colour = \"black\"))\npdf(glue(\"{out_dir}/figS2A.pdf\"), width = 2, height = 3.5)\nprint(elbow)\ndev.off()\n\npng \n  2 \n\nelbow",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>sfig2</span>"
+    ]
+  },
+  {
+    "objectID": "sfig2.html#sfig2b",
+    "href": "sfig2.html#sfig2b",
+    "title": "sfig2",
+    "section": "sfig2B",
+    "text": "sfig2B\n\npointf&lt;- glue(\"{in_dir}/similiary_point.rds\") %&gt;% read_rds\nelbow &lt;- pointf %&gt;%\n  ggplot(aes(x = index, y = dist, color = color_label)) +\n  geom_point(size = 0.3)+\n  geom_vline(xintercept = 18.5, linetype = \"dashed\", color = \"orange\") +\n  scale_color_manual(values = c(\"TWIST2-high\" = \"red\", \"others\" = \"grey\"),\n                     guide = guide_legend(\n                       title = \"label\",\n                       direction = \"horizontal\",\n                       title.position = \"top\",\n                       label.position = \"top\",\n                       axis.linewidth = NA,\n                       keywidth = unit(8, \"mm\"))) +\n  theme_few() +\n  theme(axis.text.x = element_blank(),\n        axis.text = element_text(size = 7, color = \"black\"),\n        axis.title.y = element_text(size = 7, color = \"black\"),\n        axis.title.x = element_blank(),\n        axis.ticks.y = element_line(linewidth = 0.35, colour = \"black\"),\n        axis.ticks.x = element_blank(),\n        legend.box.margin = margin(0,0,0,0),\n        legend.box.spacing = unit(1, \"mm\"),\n        legend.key.width = unit(0.7, \"mm\"),\n        legend.key.height = unit(3.5, \"mm\"),\n        legend.text = element_text(size = 7),\n        legend.spacing = unit(0, 'cm'),\n        legend.margin = margin(0,0,0,0),\n        legend.title = element_text(hjust = 0.5, vjust = 1, size = 7),\n        legend.position = \"top\",\n        panel.border = element_rect(colour = \"black\"))\npdf(glue(\"{out_dir}/figS2A.pdf\"), width = 2, height = 3.5)\nprint(elbow)\nd &lt;- dev.off()\nelbow",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>sfig2</span>"
+    ]
+  },
+  {
+    "objectID": "sfig3.html",
+    "href": "sfig3.html",
+    "title": "sfig3",
+    "section": "",
+    "text": "sfig3A-1\numap_frame &lt;- glue(\"{in_dir}/predict_umap.rds\") %&gt;% read_rds\numap_label_frame &lt;- glue(\"{in_dir}/umap_label_frame.rds\") %&gt;% read_rds\nsubcod &lt;- glue(\"{in_dir}/subcod.rds\") %&gt;% read_rds\numap_frame &lt;-umap_frame %&gt;%\n        dplyr::filter(sub_groups != \"others\") \na &lt;- ggplot(umap_frame, aes(x = V1, y = V2, color = Score)) +\n  geom_point(size = 0.5) +\n  theme_void() +\n  theme(legend.justification = c(0,0),\n        legend.position = c(0,0),\n        legend.direction = \"horizontal\",\n        legend.key.width = unit(5, \"mm\"),\n        legend.key.height = unit(3.5, \"mm\"),\n        legend.title = element_text(hjust = 1, vjust = 1))  +\n  scale_color_viridis_c(\n    guide = guide_colourbar(\n      title = \"Confidence\",\n      direction = \"horizontal\",\n      title.position = \"top\",\n      label.position = \"bottom\",\n      barwidth = unit(25, \"mm\"))\n  ) +\n  geom_text_repel(data = umap_label_frame %&gt;%\n                    dplyr::filter(sub_groups != \"others\") %&gt;%\n                    dplyr::filter(!sub_groups %in% subcod),\n                  mapping = aes(x = x, y = y, label = sub_groups), color = \"black\",size = 3,\n                  max.overlaps = 100000) +\n  geom_rect(xmin = 3.4, xmax = 5.3, ymin = -1.3, ymax = 0.026,\n            fill = NA, linewidth = 0.5, color = \"red\", linetype = \"dashed\")\n\npdf(glue(\"{out_dir}/figS3A1.pdf\"), width = 4, height = 3.5)\nprint(a)\ndev.off()\n\npng \n  2 \n\na",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>sfig3</span>"
+    ]
+  },
+  {
+    "objectID": "sfig3.html#sfig3a-2",
+    "href": "sfig3.html#sfig3a-2",
+    "title": "sfig3",
+    "section": "sfig3A-2",
+    "text": "sfig3A-2\n\numap_label_frame_sub &lt;- glue(\"{in_dir}/umap_label_frame_sub.rds\") %&gt;% read_rds\nsubcod &lt;- glue(\"{in_dir}/subcod.rds\") %&gt;% read_rds\ngroup_color &lt;- glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\numap_frame &lt;- umap_frame %&gt;%\n        dplyr::filter(sub_groups %in% subcod) %&gt;%\n        dplyr::filter(V1 &gt; 2.3) \na &lt;- ggplot(umap_frame, aes(x = V1, y = V2, color = Score)) +\n  scale_color_viridis_c() +\n  geom_point(data = umap_frame %&gt;%\n               dplyr::filter(sub_groups != \"others\") %&gt;%\n               dplyr::filter(V1 &gt; 3.4 & V1 &lt; 5.3 & V2 &gt; -1.3 & V2 &lt; 0.026) %&gt;%\n               dplyr::filter(!sub_groups %in% subcod),size = 0.3) +\n  ggforce::geom_mark_ellipse(aes(fill = sub_groups),\n                    color = NA,\n                    expand = unit(1, \"mm\")) +\n  scale_fill_manual(values = group_color) +\n  geom_point(size = 0.3) +\n  theme_void() +\n  theme(legend.position = \"none\")+\n  geom_text_repel(data = umap_label_frame_sub,\n                  mapping = aes(x = x, y = y, label = sub_groups), color = \"black\",size = 1,\n                  max.overlaps = 100)\npdf(glue(\"{out_dir}/figS3A2.pdf\"), width = 1.4, height = 1.2)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>sfig3</span>"
+    ]
+  },
+  {
+    "objectID": "sfig3.html#sfig3b",
+    "href": "sfig3.html#sfig3b",
+    "title": "sfig3",
+    "section": "sfig3B",
+    "text": "sfig3B\n\nplt &lt;- glue(\"{in_dir}/predict_point.rds\") %&gt;% read_rds\ntotalcod &lt;- glue(\"{in_dir}/twist2_idh_colod.rds\") %&gt;% read_rds\nprediction_level &lt;- glue(\"{in_dir}/prediction_level.rds\") %&gt;% read_rds\npp &lt;- plt %&gt;%\n  dplyr::filter(sample_label != \"others\") %&gt;%\n  mutate(sample_label = factor(sample_label, levels = totalcod),\n         Prediction = factor(Prediction, levels = prediction_level)) \na &lt;- ggplot(pp, aes(x = Prediction, y = sample_label, size = score, color = pct)) +\n  geom_point() +\n  scale_color_gradientn(values = c(0, 0.7, 1),\n                        colours = c(\"grey95\",\"grey85\",\"red\"),\n                        guide = guide_colorbar(\n                          barwidth = 0.7\n                        ))+\n  xlab(label = \"Prediction\") +\n  ylab(\"Real\") +\n  scale_size_area(max_size = 2) +\n  theme_few() +\n  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),\n        axis.text = element_text(size = 7, color = \"black\"),\n        axis.title = element_text(size = 7, color = \"black\"),\n        legend.box.margin = margin(0,0,0,0),\n        legend.box.spacing = unit(1, \"mm\"),\n        legend.key.width = unit(0.7, \"mm\"),\n        legend.key.height = unit(3.5, \"mm\"),\n        legend.text = element_text(size = 7),\n        legend.title = element_text(size = 7),\n        legend.spacing = unit(0, 'cm'),\n        legend.margin = margin(0,0,0,0),\n        panel.border = element_rect(colour = \"black\"),\n        axis.ticks = element_line(linewidth = 0.4, colour = \"black\")) +\n  coord_cartesian(clip = \"on\")\npdf(glue(\"{out_dir}/figS3B.pdf\"), width = 3.4, height = 3.5)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>sfig3</span>"
+    ]
+  },
+  {
+    "objectID": "sfig3.html#sfig3c",
+    "href": "sfig3.html#sfig3c",
+    "title": "sfig3",
+    "section": "sfig3C",
+    "text": "sfig3C\n\nfull_density &lt;- glue(\"{in_dir}/predict_density.rds\") %&gt;% read_rds\nrdp &lt;- full_density %&gt;%\n  ggplot(aes(x = Score, y = Prediction, fill = label, color = label)) +\n  ggridges::geom_density_ridges(alpha = 0.4, linewidth = 0.2) +\n  scale_fill_manual(values = c(\"consistent\" = \"red\", \"not consistent\" = \"grey\")) +\n  scale_color_manual(values = c(\"consistent\" = \"red\", \"not consistent\" = \"grey\")) +\n  xlab(label = \"Confidence\") +\n  ylab(label = \"Prediction\") +\n  theme_few() +\n  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),\n        axis.text = element_text(size = 7, color = \"black\"),\n        axis.title.y = element_text(size = 7, color = \"black\"),\n        axis.title.x = element_text(size = 7, color = \"black\"),\n        axis.ticks = element_line(linewidth = 0.35, colour = \"black\"),\n        legend.box.margin = margin(0,0,0,0),\n        legend.box.spacing = unit(1, \"mm\"),\n\n        legend.key.width = unit(0.7, \"mm\"),\n        legend.key.height = unit(3.5, \"mm\"),\n        legend.text = element_text(size = 7),\n        legend.title = element_text(size = 7),\n        legend.spacing = unit(0, 'cm'),\n        legend.margin = margin(0,0,0,0),\n\n        legend.position = \"top\",\n\n        panel.border = element_rect(colour = \"black\"))\npdf(glue(\"{out_dir}/figS3C.pdf\"), width = 3.4, height = 3.5)\nprint(rdp)\nd &lt;- dev.off()\nrdp",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>sfig3</span>"
+    ]
+  },
+  {
+    "objectID": "sfig456.html",
+    "href": "sfig456.html",
+    "title": "sfig456",
+    "section": "",
+    "text": "sfig4\nagsuzhou_zhanglin_BL125.snp &lt;- read_rds(glue(\"{in_dir}/varscan.snp.rds\"))\na &lt;- agsuzhou_zhanglin_BL125.snp %&gt;%\n  ggplot() +\n  geom_density(data = . %&gt;% dplyr::filter(somatic_status != \"Unknown\"),\n               mapping = aes(x = position, fill = somatic_status), alpha = 0.2, linewidth = 0.2) +\n  geom_vline(data =\n               tibble(\n                 chrom = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"),\n                 position = c(123435318, 94362040, 91169345, 49892850, 49156541, 60172198, 60186171, 45255268, 43695248, 53488381, 53576500, 35470568, 17755192, 17247124, 19160798, 37007677, 25205468, 18665981, 26346405, 28342188, 12035514, 15283703, 61077972, 10489856)\n               )%&gt;% mutate(chrom = factor(chrom, levels = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"))),\n             mapping = aes(xintercept = position), color = \"orange\", linewidth = 0.2) +\n  geom_vline(data =\n               tibble(\n                 chrom = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"),\n                 position = c(999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999)\n               )%&gt;% mutate(chrom = factor(chrom, levels = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"))),\n             mapping = aes(xintercept = position), color = \"black\", linewidth = 0.2) +\n  geom_vline(data =\n               tibble(\n                 chrom = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"),\n                 position = c(248955422, 242192529, 198294559, 190213555, 181537259, 170804979, 159344973, 145137636, 138393717, 133796422, 135085622, 133274309, 114363328, 107042718, 101990189, 90337345, 83256441, 80372285, 58616616, 64443167, 46708983, 50817468, 156039895, 57226415)\n               ) %&gt;% mutate(chrom = factor(chrom, levels = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"))),\n             mapping = aes(xintercept = position), color = \"black\", linewidth = 0.2) +\n  geom_vline(data = tibble(chrom = \"chr1\", position = 241506090)%&gt;% mutate(chrom = factor(chrom, levels = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"))), mapping = aes(xintercept = position), color = \"red\", linewidth = 0.5) +\n  theme_few() +\n  theme(axis.text = element_text(size = 5),\n        axis.text.x.bottom = element_text(angle = 30, vjust = 1, hjust = 1),\n        axis.ticks = element_line(linewidth = 0.2),\n        axis.ticks.length = unit(0.5, \"mm\"),\n        panel.spacing = unit(1, \"mm\")) +\n  facet_wrap(~ chrom, scales = \"free\")\npdf(glue(\"{out_dir}/figS4.pdf\"), width = 7, height = 7)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>sfig456</span>"
+    ]
+  },
+  {
+    "objectID": "sfig456.html#sfig5",
+    "href": "sfig456.html#sfig5",
+    "title": "sfig456",
+    "section": "sfig5",
+    "text": "sfig5\n\na &lt;- agsuzhou_zhanglin_BL125.snp  %&gt;%\n  ggplot() +\n  scattermore::geom_scattermore(mapping = aes(x = position, y = deltavaf,color = somatic_status)) +\n  facet_wrap(~chrom, scales = \"free_x\") +\n  geom_vline(data =\n               tibble(\n                 chrom = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"),\n                 position = c(123435318, 94362040, 91169345, 49892850, 49156541, 60172198, 60186171, 45255268, 43695248, 53488381, 53576500, 35470568, 17755192, 17247124, 19160798, 37007677, 25205468, 18665981, 26346405, 28342188, 12035514, 15283703, 61077972, 10489856)\n               ) %&gt;% mutate(chrom = factor(chrom, levels = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"))), mapping = aes(xintercept = position), color = \"orange\") +\n  geom_vline(data =\n               tibble(\n                 chrom = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"),\n                 position = c(999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999)\n               ) %&gt;% mutate(chrom = factor(chrom, levels = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"))),mapping = aes(xintercept = position), color = \"black\") +\n  geom_vline(data =\n               tibble(\n                 chrom = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"),\n                 position = c(248955422, 242192529, 198294559, 190213555, 181537259, 170804979, 159344973, 145137636, 138393717, 133796422, 135085622, 133274309, 114363328, 107042718, 101990189, 90337345, 83256441, 80372285, 58616616, 64443167, 46708983, 50817468, 156039895, 57226415)) %&gt;% mutate(chrom = factor(chrom, levels = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"))),\n             mapping = aes(xintercept = position), color = \"black\") +\n  geom_vline(data = tibble(chrom = \"chr1\", position = 241506090) %&gt;% mutate(chrom = factor(chrom, levels = c(paste0(\"chr\", 1:22), \"chrX\", \"chrY\"))),\n             mapping = aes(xintercept = position), color = \"red\", alpha = 0.2) +\n  theme_few() +\n  theme(axis.text = element_text(size = 5),\n        axis.text.x.bottom = element_text(angle = 30, vjust = 1, hjust = 1),\n        axis.ticks = element_line(linewidth = 0.2),\n        axis.ticks.length = unit(0.5, \"mm\"),\n        panel.spacing = unit(1, \"mm\"))\npdf(glue(\"{out_dir}/figS5.pdf\"), width = 7, height = 7)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>sfig456</span>"
+    ]
+  },
+  {
+    "objectID": "sfig456.html#sfig6",
+    "href": "sfig456.html#sfig6",
+    "title": "sfig456",
+    "section": "sfig6",
+    "text": "sfig6\n\ncnvplotdf &lt;- glue(\"{in_dir}/cnvkit.rds\") %&gt;% read_rds\npdf(glue(\"{out_dir}/figS6.pdf\"), width=7, height=1.6)\na &lt;- ggplot(cnvplotdf,\n       aes(x = sample_id, y = midpoint, height = bin_length, fill = log2)) +\n  geom_tile(alpha = 0.6)  +\n  geom_hline(data = tibble(y = 241506090, chromosome = \"chr1\")%&gt;%\n               dplyr::mutate(\n                 chromosome = factor(chromosome, level = c(\n                   paste0(\"chr\", 1:22), \"chrX\", \"chrY\"\n                 ))), mapping = aes(yintercept = y), color  = \"red\", size  =0.1) +\n  scale_fill_gradient2(low = \"blue\", mid = \"grey95\", high = \"red\") +\n  theme_bmbdc(font_size = 16, fill = \"white\", del = \"x\") +\n  facet_grid(sample_id ~ chromosome, scales = \"free\", space = \"free\") +\n  coord_flip(clip = \"off\") +\n  theme(strip.text.y.right = element_blank(),\n        strip.text.x.top = element_text(angle = 45, size = 7),\n        strip.background = element_rect(fill = NA),\n        strip.clip = \"off\",\n        panel.border = element_rect(size = 0.2),\n        axis.title.y = element_blank(),\n        axis.ticks = element_line(linewidth = 0.2,color = \"black\"),\n        axis.ticks.length = unit(1, \"mm\"),\n        axis.text = element_text(color = \"black\"),\n        axis.text.y = element_text(size = 6),\n        panel.spacing = unit(0, \"lines\")) \nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>sfig456</span>"
+    ]
+  },
+  {
+    "objectID": "sfig7.html",
+    "href": "sfig7.html",
+    "title": "sfig7",
+    "section": "",
+    "text": "sfig7A\ngroup_color &lt;-  glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\npieframe&lt;- glue(\"{in_dir}/twist2_idh_pie.rds\") %&gt;% read_rds()\npieframe &lt;- pieframe %&gt;%\n  group_by(label, IDH) %&gt;%\n  summarise(n = n()) %&gt;%\n  group_by(IDH) %&gt;%\n  mutate(prop = n/sum(n)) \na &lt;- ggplot(pieframe, aes(x = \"\", y = prop, fill = label)) +\n  geom_bar(width = 1, stat = \"identity\", color = \"white\") +\n  coord_polar(\"y\", start = 0)+\n  scale_fill_manual(values = group_color) +\n  theme_void()+\n  facet_wrap(~IDH)\npdf(glue(\"{out_dir}/figS7A.pdf\"),width = 5, height = 4)\nprint(a)\nd &lt;- dev.off()\na",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>sfig7</span>"
+    ]
+  },
+  {
+    "objectID": "sfig7.html#sfig7b",
+    "href": "sfig7.html#sfig7b",
+    "title": "sfig7",
+    "section": "sfig7B",
+    "text": "sfig7B\n\nmx &lt;- read_rds(glue(\"{in_dir}/twist2_idh_heatmap.rds\"))\ncluster_annotation &lt;- read_rds(glue(\"{in_dir}/twist2_idh_anno.rds\"))\ngroup_color &lt;-  glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\ntotalcodf &lt;- glue(\"{in_dir}/twist2_idh_colod.rds\") %&gt;% read_rds\nha &lt;- HeatmapAnnotation(\n  \"subtypes\" = cluster_annotation$label,\n  \"IDH1/2 mutation\" = cluster_annotation$IDH,\n  \"FH_A273T\" = cluster_annotation$FH_A273T,\n  col = list(\n    \"subtypes\" = group_color,\n    \"IDH1/2 mutation\" = c(\"IDH2_140\" = \"#A0522D\", \"IDH1_132\" = \"#FA8072\"),\n    \"FH_A273T\" = c(\"FH_A273T\" = \"black\"),\n    tmp_df = c(\"TRUE\" = \"black\")\n  ),\n  simple_anno_size = unit(3, \"mm\"),\n  annotation_height = unit(12, \"mm\"),\n  show_legend = F,\n  show_annotation_name = T,\n  annotation_name_gp = gpar(fontsize = 10),\n  border=T,\n  gap = unit(0, \"mm\")\n)\nht &lt;- Heatmap(t(mx[cluster_annotation$sample_id,]),\n              col = circlize::colorRamp2(breaks = c(-2,0,2), c(\"blue\", \"white\", \"red\")),\n              column_split = factor(cluster_annotation$label2, levels = totalcodf),\n              clustering_method_columns = \"ward.D2\",\n              clustering_distance_columns = \"spearman\",\n              cluster_rows = F, cluster_columns = T,\n              show_row_names = F, show_column_names = F, top_annotation = ha,\n              column_title_rot = 45,\n              column_dend_height = unit(3, \"mm\"),\n              use_raster = F,\n              heatmap_width = unit(55, \"mm\"),\n              column_title_gp = gpar(fontsize = 9),\n              border = T,\n              border_gp = gpar(lwd = 0.5),\n              column_gap = unit(0, \"mm\"), show_heatmap_legend = F)\npdf(glue(\"{out_dir}/figS7B.pdf\"), width = 8.6, height = 4.5)\nht0 &lt;- draw(ht)\nd &lt;- dev.off()\ndraw(ht)",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>sfig7</span>"
+    ]
+  },
+  {
+    "objectID": "sfig7.html#sfig7c",
+    "href": "sfig7.html#sfig7c",
+    "title": "sfig7",
+    "section": "sfig7C",
+    "text": "sfig7C\n\numpaf &lt;- glue(\"{in_dir}/twist2_idh_umap.rds\") %&gt;% read_rds\ngroup_color &lt;-  glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\np1 &lt;- umpaf %&gt;%\n  ggplot(aes(x = V1, y = V2, color = label)) +\n  geom_point(size = 2) +\n  scale_color_manual(values = group_color) +\n  theme_void() +\n  theme(legend.position = \"bottom\", panel.border = element_rect(fill = NA, colour = \"black\"))\np2 &lt;- umpaf %&gt;%\n  ggplot(aes(x = V1, y = V2, color = mutation)) +\n  geom_point(size = 2) +\n  ggforce::geom_mark_hull(data = umpaf, mapping = aes(color = label3), expand = unit(2.5, \"mm\"))+\n  theme_void()+\n  scale_color_manual(values = c(\"no mutation\" = \"grey\", \"IDH1_132\" = \"#FA8072\",\"IDH2_140\" = \"#A0522D\",\"FH_A273T\" = \"black\")) +\n  theme(legend.position = \"bottom\", panel.border = element_rect(fill = NA, colour = \"black\"))\npdf(glue(\"{out_dir}/figS7C.pdf\"),width = 6,height = 4)\nprint(p1 + p2)\nd &lt;- dev.off()\nprint(p1 + p2)",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>sfig7</span>"
+    ]
+  },
+  {
+    "objectID": "sfig11.html",
+    "href": "sfig11.html",
+    "title": "sfig11",
+    "section": "",
+    "text": "sfig11A\nFGF_score &lt;- glue(\"{in_dir}/FGF_score.rds\") %&gt;% read_rds()\np &lt;- ggplot(FGF_score,\n            aes(x = sample_label, y = name, fill = value)) +\n  geom_tile() +\n  scale_fill_gradient2(low = \"blue\", high = \"red\") +\n  theme_few() +\n  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +\n  theme(legend.position = \"none\",\n        axis.title = element_blank(),\n        axis.text = element_text(size = 7, colour = \"black\"),\n        axis.ticks = element_line(linewidth = 0.1, colour = \"black\"),\n        axis.ticks.length = unit(0.05, \"lines\"),\n\n        legend.box.margin = margin(0,0,0,0),\n        legend.box.spacing = unit(1.5, \"mm\"))\n\npdf(glue(\"{out_dir}/figS11A.pdf\"), width = 3.5, height = 5)\nprint(p)\nd &lt;- dev.off()\np",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>sfig11</span>"
+    ]
+  },
+  {
+    "objectID": "sfig11.html#sfig11bc",
+    "href": "sfig11.html#sfig11bc",
+    "title": "sfig11",
+    "section": "sfig11BC",
+    "text": "sfig11BC\n\nTRIGLYCERIDE &lt;- glue(\"{in_dir}/TRIGLYCERIDE_score.rds\") %&gt;% read_rds()\n\np &lt;- ggplot(TRIGLYCERIDE$REACTOME_TRIGLYCERIDE_METABOLISM,\n            aes(x = sample_label, y = name, fill = value)) +\n  geom_tile() +\n  scale_fill_gradient2(low = \"blue\", high = \"red\") +\n  theme_few() +\n  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +\n  theme(legend.position = \"none\",\n        axis.title = element_blank(),\n        axis.text = element_text(size = 7, colour = \"black\"),\n        axis.ticks = element_line(linewidth = 0.1, colour = \"black\"),\n        axis.ticks.length = unit(0.05, \"lines\"),\n\n        legend.box.margin = margin(0,0,0,0),\n        legend.box.spacing = unit(1.5, \"mm\"))\n\npdf(glue(\"{out_dir}/figS11B.pdf\"), width = 3.5, height = 2)\nprint(p)\nd &lt;- dev.off()\np",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>sfig11</span>"
+    ]
+  },
+  {
+    "objectID": "sfig11.html#sfig11d",
+    "href": "sfig11.html#sfig11d",
+    "title": "sfig11",
+    "section": "sfig11D",
+    "text": "sfig11D\n\nFABP_score &lt;- glue(\"{in_dir}/FABP_score.rds\") %&gt;% read_rds()\np &lt;- ggplot(FABP_score,\n            aes(x = sample_label, y = name, fill = value)) +\n  geom_tile() +\n  scale_fill_gradient2(low = \"blue\", high = \"red\") +\n  theme_few() +\n  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +\n  theme(legend.position = \"none\",\n        axis.title = element_blank(),\n        axis.text = element_text(size = 7, colour = \"black\"),\n        axis.ticks = element_line(linewidth = 0.1, colour = \"black\"),\n        axis.ticks.length = unit(0.05, \"lines\"),\n\n        legend.box.margin = margin(0,0,0,0),\n        legend.box.spacing = unit(1.5, \"mm\"))\npdf(glue(\"{out_dir}/figS11D.pdf\"), width = 3.5, height = 2)\nprint(p)\nd &lt;- dev.off()\np",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>sfig11</span>"
+    ]
+  },
+  {
+    "objectID": "sfig12.html",
+    "href": "sfig12.html",
+    "title": "sfig12",
+    "section": "",
+    "text": "sfig12A\nimmue_cells &lt;- glue(\"{in_dir}/immue_cell.rds\") %&gt;% read_rds\ngroup_color &lt;- glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\np &lt;- ggplot(immue_cells,\n            aes(x = sample_label, y = value, color = sample_label)) +\n  geom_boxplot(outlier.size = 0.5) +\n  scale_color_manual(values = group_color) +\n  theme_few() +\n  facet_wrap(~name, nrow = 2, scales = \"free_y\") +\n  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +\n  theme(legend.position = \"none\",\n        axis.title = element_blank(),\n        axis.text = element_text(size = 7, colour = \"black\"),\n        axis.ticks = element_line(linewidth = 0.1, colour = \"black\"),\n        axis.ticks.length = unit(0.05, \"lines\"),\n\n        legend.box.margin = margin(0,0,0,0),\n        legend.box.spacing = unit(1.5, \"mm\"))\npdf(glue(\"{out_dir}/figS12A.pdf\"), width = 6.7, height = 2.5)\nprint(p)\nd &lt;- dev.off()\np",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>sfig12</span>"
+    ]
+  },
+  {
+    "objectID": "sfig12.html#sfig12b",
+    "href": "sfig12.html#sfig12b",
+    "title": "sfig12",
+    "section": "sfig12B",
+    "text": "sfig12B\n\nimmue_gene &lt;- glue(\"{in_dir}/immue_gene.rds\") %&gt;% read_rds\ngroup_color &lt;- glue(\"{in_dir}/group_color.rds\") %&gt;% read_rds\np &lt;- ggplot(immue_gene,\n            aes(x = sample_label, y = value, color = sample_label)) +\n  geom_boxplot(outlier.size = 0.8) +\n  scale_color_manual(values = group_color) +\n  theme_few() +\n  facet_wrap(~name, nrow = 1, scale = \"free_y\") +\n  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)) +\n  theme(legend.position = \"none\",\n        axis.title = element_blank(),\n        axis.text = element_text(size = 7, colour = \"black\"),\n        axis.ticks = element_line(linewidth = 0.1, colour = \"black\"),\n        axis.ticks.length = unit(0.05, \"lines\"),\n\n        legend.box.margin = margin(0,0,0,0),\n        legend.box.spacing = unit(1.5, \"mm\"))\npdf(glue(\"{out_dir}/figS12B.pdf\"), width = 6.7, height = 2.5)\nprint(p)\nd &lt;- dev.off()\np",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>sfig12</span>"
+    ]
+  }
+]

@@ -1,0 +1,89 @@
+# fig3
+
+```{r fig3}
+#| echo: true
+#| warning: false
+#| message: false 
+pkgs <- c("ggthemes", "jhtools", "glue", "ggsci", "patchwork", "tidyverse",
+          "circlize", "ComplexHeatmap", "SummarizedExperiment", "jhuanglabRNAseq",
+          "viridis","ggrepel", "tidygraph","ggraph")
+for (pkg in pkgs){
+  suppressPackageStartupMessages(library(pkg, character.only = T))
+}
+out_dir <- "./results/fig3" %>% checkdir
+in_dir <- "./data" %>% checkdir
+
+```
+
+## fig3C
+
+```{r fig3-C}
+#| echo: true
+#| warning: false
+#| message: false 
+#| label: fig3-C
+#| fig-width: 4
+#| fig-height: 4
+sample_frame <- read_rds(glue("{in_dir}/pie_group.rds"))
+totalcod <- glue("{in_dir}/twist2_idh_colod.rds") %>% read_rds
+sample_frame <- sample_frame %>%
+  mutate(twist2_label = case_when(
+    color_label == "TWIST2-high" ~ "TWIST2-high",
+    T ~ "other group"
+  ),
+  mutation2 = case_when(
+    str_detect(mutation, pattern = "IDH") ~ "IDH1/2 mutation",
+    str_detect(mutation, pattern = "FH") ~ "FH A273T",
+    T ~ "others"),
+  twist2_label = factor(twist2_label, levels = c("TWIST2-high","other group")),
+  color_label = factor(color_label, levels = totalcod)) %>%
+  group_by(mutation2, twist2_label) %>%
+  summarise(n = n()) %>%
+  group_by(twist2_label) %>%
+  mutate(prop = n/sum(n)) 
+a <- ggplot(sample_frame, aes(x = "", y = prop, fill = mutation2)) +
+  geom_bar(width = 1, stat = "identity", color = "white") +
+  geom_text(mapping  = aes(x = "", y = prop, label = mutation2), position = position_stack(vjust= 0.5 ), size = 3)+
+  coord_polar("y", start = 0)+
+  scale_fill_manual(values = c("IDH1/2 mutation" = "red", "FH A273T" = "#4D84C5", "others" = "grey")) +
+  theme_void()+
+  facet_wrap(~twist2_label)
+pdf(glue("{out_dir}/fig3B.pdf"),width = 4, height = 4)
+print(a)
+d <- dev.off()
+a
+```
+
+## fig3D
+
+```{r fig3D}
+#| echo: true
+#| warning: false
+#| message: false 
+#| label: fig3-D
+#| fig-width: 5
+#| fig-height: 5
+survdata <- read_rds(glue("{in_dir}/surv.rds"))
+pdf(glue("{out_dir}/fig3D.pdf"), width = 5, height = 5)
+fit <- survival::survfit(Surv(os_time, vital_status) ~ t, data = survdata)
+a <- survminer::ggsurvplot(
+  fit,
+  data = survdata,
+  size = 1,
+  palette = c("red", "#2E9FDF"),
+  conf.int = F,
+  legend.title = "label",
+  pval = TRUE,
+  risk.table = TRUE,
+  risk.table.col = "strata",
+  risk.table.y.text = T,
+  xlim = c(0, 60),
+  log.rank.weights = "n",
+  break.time.by = 12,
+  risk.table.height = 0.25,
+  ggtheme = theme_classic()
+)
+print(a)
+d <- dev.off()
+a
+```

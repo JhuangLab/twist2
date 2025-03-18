@@ -1,0 +1,45 @@
+project:
+  type: book
+
+book:
+  title: "twist2_zt"
+  author: "Tao Zeng, Yuliang Wang, Yongjing Liu, Yali Xie, Xiaoxi Feng, Jinping Li"
+  date: "3/17/2025"
+  chapters:
+    - index.qmd
+    - fig1.qmd
+    - fig2.qmd
+    - fig3.qmd
+    - fig5.qmd
+    - sfig1.qmd
+    - sfig2.qmd
+    - sfig3.qmd
+    - sfig456.qmd
+    - sfig7.qmd
+    - sfig11.qmd
+    - sfig12.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    number-sections: false
+    header-includes:
+      - |
+        <header>
+          <div style="display: flex; justify-content: space-between; padding: 10px; background-color: #e3ecff;">
+            <div class="logo">
+              <img src="./logo2.png" alt="Logo" style="max-height: 90px;">
+            </div>
+            <div class="title" style="font-size: 24px; font-weight: bold; text-align: right;">
+              浙大一院生物医学大数据中心
+            </div>
+          </div>
+        </header>
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

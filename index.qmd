@@ -1,0 +1,19 @@
+# Preface {.unnumbered}
+
+This is a Quarto book of code accompanying our manuscript "TWIST2 high expression defines a new subtype of B-cell precursor acute lymphoblastic leukemia".
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false 
+pkgs <- c("ggthemes", "jhtools", "glue", "ggsci", "patchwork", "tidyverse",
+          "circlize", "ComplexHeatmap", "SummarizedExperiment", "jhuanglabRNAseq",
+          "viridis","ggrepel", "tidygraph", "ggraph")
+for (pkg in pkgs){
+  suppressPackageStartupMessages(library(pkg, character.only = T))
+}
+```
+
+```{r}
+sessionInfo()
+```
