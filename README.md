@@ -1,6 +1,6 @@
 # TWIST2 high expression defines a novel subtype of B-cell precursor acute lymphoblastic leukemia  
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/) [![Nextflow](https://img.shields.io/badge/nextflow-%3E%2023.10-099acd.svg)](https://www.nextflow.io) [![Snakemake](https://img.shields.io/badge/snakemake-%E2%89%A57.32-brightgreen.svg)](https://snakemake.readthedocs.io)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![R-4.3.0](https://img.shields.io/badge/R-%E2%89%A54.3.0-%23276DC3.svg?style=flat&logo=r&logoColor=white)](https://cran.r-project.org/bin/windows/base/old/4.3.0/) [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/) [![Nextflow](https://img.shields.io/badge/nextflow-%3E%2023.10-099acd.svg)](https://www.nextflow.io) [![Snakemake](https://img.shields.io/badge/snakemake-%E2%89%A57.32-brightgreen.svg)](https://snakemake.readthedocs.io)
 
 **Repository**: https://jhuanglab.github.io/twist2/
 
@@ -21,11 +21,6 @@ By integrating transcriptomic data from **3,371 BCP-ALL samples** across 23 publ
 
 Functional assays confirm that *TWIST2* overexpression impairs proliferation in BCP-ALL cell lines and murine pro-B cells by inducing cell cycle arrest—consistent with its context-dependent tumor-suppressive role.
 
-## Key Findings
-- *TWIST2*-high defines a new molecular entity in BCP-ALL classification
-- Enrichment of *FH* A273T—a constitutional variant with loss of heterozygosity—suggests a potential cancer predisposition link
-- Despite metabolic dysregulation (*FH* or *IDH1/2* mutations), *TWIST2* overexpression appears independent of these alterations
-- The subtype may inform future risk stratification and targeted therapeutic strategies
 
 ## Repository Contents
 - **Analysis code**: Reproducible pipelines for RNA-seq processing, UMAP clustering, mutation calling, and survival analysis  
