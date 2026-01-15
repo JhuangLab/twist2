@@ -23,8 +23,8 @@ Functional assays confirm that *TWIST2* overexpression impairs proliferation in 
 
 ## Repository Contents
 
--   **Analysis code**: Reproducible pipelines for RNA-seq processing, UMAP clustering, mutation calling, and survival analysis\
--   **Data resources**: Sample annotations, differential expression results, and mutation tables\
+-   **Analysis code**: Reproducible pipelines for RNA-seq processing, UMAP clustering, mutation calling, and survival analysis
+-   **Data resources**: Sample annotations, differential expression results, and mutation tables
 -   **Documentation**: Detailed methods aligned with the manuscript
 
 ## Access
