@@ -26,6 +26,6 @@ Functional assays confirm that *TWIST2* overexpression impairs proliferation in 
 
 -   **Code**: <https://github.com/JhuangLab/twist2>
 
--   **Interactive site**: <https://jhuanglab.github.io/twist2/>
+-   **Interactive site**: <https://jhuanglab.github.io/twist2>
 
 -   **Data**: Available upon request from the corresponding authors
